@@ -1,13 +1,11 @@
 import React from "react";
 import Button from "../Componenets/Button";
+import BannerComponenet from "../Componenets/BannerComponenet";
 function HomePage() {
     return (
-        <div>
-            <div>
-                <Button>رزرو آنلاین</Button>
-                <Button>مشاهده منو</Button>
-            </div>
-        </div>
+        <>
+            <BannerComponenet/>
+        </>
     )
 }
 
