@@ -8,7 +8,8 @@ function CardHolderComponenet() {
         {Array.from(Array(3)).map((item,index)=>{
         console.log(index,item)
         return <CardsComponenet key={index}/>
-        
+
+
     })}
     </div>
     

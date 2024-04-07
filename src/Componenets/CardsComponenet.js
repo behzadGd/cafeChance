@@ -8,6 +8,7 @@ function CardsComponenet() {
     <p>How to park your car at your garage?</p>
     <div className="card-actions justify-end">
       <button className="btn btn-primary">Learn now!</button>
+      
     </div>
   </div>
 </div>
