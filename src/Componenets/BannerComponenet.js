@@ -8,6 +8,7 @@ function BannerComponenet() {
       <div className="bg-[url('../public/img/3.jpg')] bg-cover w-full h-full flex justify-end items-end ">
                
                
+               
                 <div className='w-1/2 h-96 flex-col content-end item-end'>
                  
                  
