@@ -8,6 +8,7 @@ module.exports = {
       'custom_darkbrown':'#382d1d'
     },
     },
+    
    
   },
   plugins: [require("daisyui")],
