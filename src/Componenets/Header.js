@@ -8,7 +8,6 @@ function Header() {
             <div>
                 admin & instagram
             </div>
-           
             {/* nav bar */}
             <div className="flex flex-row-reverse ">
                 {navBarLinks.map((item,index)=>{
