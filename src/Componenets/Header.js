@@ -1,12 +1,13 @@
 import React from "react";
 import { navBarLinks } from "../Libs/Constans";
 import { NavLink } from "react-router-dom";
+import SunIcon from "./SunIcon";
 function Header() {
     return ( 
         <div className="flex justify-between h-14 items-center bg-custom_darkbrown">
             {/* admin icon instagram icon */}
             <div>
-                admin & instagram
+                <SunIcon/>
             </div>
             {/* nav bar */}
             <div className="flex flex-row-reverse ">
