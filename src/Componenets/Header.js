@@ -4,12 +4,13 @@ import { Link, NavLink } from "react-router-dom";
 import SunIcon from "./SunIcon";
 function Header() {
     return ( 
-        <div className="flex justify-between h-14 items-center bg-custom_darkbrown">
+        <div className="flex justify-between h-16 items-center bg-custom_darkbrown">
             {/* admin icon instagram icon */}
             <div className="flex justify-center  h-4/6 ">
                 <SunIcon/>
                     <Link className="-mt-0.5" to={'/user'}>
-                    <img className="w-10 h-10 " src="https://img.icons8.com/quill/100/user-male-circle.png" alt="user-male-circle"/>                
+                    <img className="w-10 h-10 " src="https://img.icons8.com/quill/100/user-male-circle.png" alt="user-male-circle"/>  
+                    {/* <i class="fas fa-search"></i>              */}
                 </Link>
     
            
@@ -23,7 +24,7 @@ function Header() {
                 })}
             </div>
             {/* logo */}
-            <div className="bg-[url('../public/img/logo.jpg')] w-20 h-10 bg-cover"></div>
+            <div className="bg-[url('../public/img/logochance.png')] w-14 h-14 bg-cover mr-6 mb-2"></div>
         </div>
      );
 }
