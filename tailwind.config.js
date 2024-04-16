@@ -8,7 +8,8 @@ module.exports = {
       'custom_darkbrown':'#382d1d'
     },
     borderRadius: {
-      'custom-soft':'130px'
+      'custom-soft':'130px',
+      'custom-soft-small':'90px'
     }
     },
     
