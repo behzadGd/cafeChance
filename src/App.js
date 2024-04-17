@@ -5,12 +5,14 @@ import HomePage from "./Pages/HomePage";
 import ProductPage from "./Pages/ProductPage";
 import AboutPage from "./Pages/AboutPage";
 import UserPage from "./Pages/UserPage";
+import Footer from "./Componenets/Footer";
 
 function App() {
   const myNavs=createBrowserRouter([{
    element: (<div>
-    <Header/>
+    <Header/> 
     <Outlet/>
+    <Footer/>
     </div>),
     errorElement: <div>Not Found</div>,
     path:'/',
