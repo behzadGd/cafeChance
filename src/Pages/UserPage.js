@@ -12,7 +12,7 @@ function UserPage() {
             
 <div className="flex flex-col justify-center justify-items-center  mt-28 bg-custom_darkbrown  h-3/4 rounded-tl-custom-soft p-4 ">
           <h1 className="font-bold mb-5 flex justify-center text-xl text-custom_brown mt-6 ">
-            {tab === 'login' ? 'ورود کاربر':'ثبت نام'}
+            {tab === 'login' ? 'ورود کاربر':'ثبت نام کاربر'}
           </h1>
           <div className="h-96 mt-20">
             {tab === 'login'?<LoginForm/> : <RejesterForm/>}
