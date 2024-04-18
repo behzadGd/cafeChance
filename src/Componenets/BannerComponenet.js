@@ -14,7 +14,7 @@ function BannerComponenet() {
                  
                  {/* text holder banner inside */}
                   <div className='w-2/4 mb-2   '>
-                  <h1 className='font-extrabold text-8xl text-custom_brown text-right  mb-5 bg-custom_darkbrown rounded-tl-custom-soft-small p-2'>کافه چنس</h1>
+                  <h1 className='font-extrabold text-8xl text-custom_brown text-right  mb-5 bg-custom_darkbrown rounded-tl-custom-soft-small p-2 '>کافه چنس</h1>
                   <h2 className='text-xl text-custom_brown font-bold text-right mr-16 mt-3 bg-custom_darkbrown rounded-tl-custom-soft-small p-2'>شانستو برای مزه بهتر امتحان کن</h2>
                 </div>
                
