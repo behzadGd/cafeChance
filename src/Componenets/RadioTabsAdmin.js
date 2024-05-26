@@ -1,9 +1,9 @@
-import RadioContainer from "./RadioContainer";
+import RadioTabOne from "./RadioTabOne";
 
 function RadioTabsAdmin() {
   return (
     <>
-      <div role="tablist" className="tabs tabs-lifted">
+      <div role="tablist" className="tabs tabs-lifted mb-5">
         <input
           type="radio"
           name="my_tabs_2"
@@ -13,9 +13,9 @@ function RadioTabsAdmin() {
         />
         <div
           role="tabpanel"
-          className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+          className="tab-content bg-custom_darkbrown border-base-300 rounded-box p-6"
         >
-          <RadioContainer />
+          <RadioTabOne />
         </div>
 
         <input
