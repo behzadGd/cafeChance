@@ -4,7 +4,6 @@ function useAsync(url, method = "GET") {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(undefined);
   const [error, setError] = useState(undefined);
-
   function getData() {
     setLoading(true);
     axios({
