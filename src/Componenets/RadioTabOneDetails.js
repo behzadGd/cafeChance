@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import useAsync from "../Hooks/useAsync";
 function RadioTabOneDetiails() {
+  let { getData, loading } = useAsync("api/product/best/product");
+  useEffect(() => {
+    // getData();
+  }, []);
   return (
     <>
       <div className="my-3 border border-solid border-custom_brown">
@@ -9,7 +14,14 @@ function RadioTabOneDetiails() {
           </div>
           <div className="flex justify-end flex-1 px-2">
             <div className="flex items-stretch">
-              <a className="btn btn-ghost rounded-btn">نمایش همه دسته ها</a>
+              <a
+                className="btn btn-ghost rounded-btn"
+                onClick={(e) => {
+                  getData();
+                }}
+              >
+                نمایش همه دسته ها
+              </a>
               <div className="dropdown dropdown-end">
                 <div
                   tabIndex={0}

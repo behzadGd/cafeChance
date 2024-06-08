@@ -8,7 +8,7 @@ function RadioTabOne() {
   let [price, setPrice] = useState({});
   let [recipe, setRecipe] = useState({});
   let [best, setBest] = useState({ isBestProduct: false });
-  let { getData, loading } = useAsync("");
+  let { getData, loading } = useAsync();
   let [category, setCategory] = useState("");
   useEffect(() => {
     getData();
@@ -35,6 +35,7 @@ function RadioTabOne() {
             onChange={(e) => {
               setCategory({
                 category: {
+                  id: "",
                   name: e.target.value,
                 },
               });
@@ -46,6 +47,9 @@ function RadioTabOne() {
               className="btn btn-outline btn-success w-24"
               onClick={(e) => {
                 e.preventDefault();
+                axios.post("api/category", {
+                  allProduct,
+                });
               }}
             >
               ارسال
@@ -137,7 +141,8 @@ function RadioTabOne() {
               className="btn btn-outline btn-success w-24"
               onClick={(e) => {
                 e.preventDefault();
-                axios.post("/api/product/", {
+                axios.post("api/product", {
+                  // target: "http://localhost:8080",
                   allProduct,
                 });
               }}
