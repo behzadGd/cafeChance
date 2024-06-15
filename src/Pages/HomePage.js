@@ -7,13 +7,13 @@ import GallaryComponenet from "../Componenets/GallaryComponenet";
 import IconRow from "../Componenets/IconRow";
 function HomePage() {
   return (
-    <div className="bg-[url('../public/img/bghomepage.jpg')] bg-cover w-full h-full">
+    <>
       <BannerComponenet />
       <CardHolderComponenet />
       <ModernBanner />
       <GallaryComponenet />
       <IconRow />
-    </div>
+    </>
   );
 }
 
