@@ -3,15 +3,17 @@ import useAsync from "../Hooks/useAsync";
 import axios from "axios";
 import RadioTabOneDetiails from "./RadioTabOneDetails";
 function RadioTabOne() {
+  // axios.defaults.baseURL = "http://localhost:8080/";
+
   let [nameProduct, setNameProduct] = useState({});
   let [description, setDescription] = useState({});
   let [price, setPrice] = useState({});
   let [recipe, setRecipe] = useState({});
   let [best, setBest] = useState({ isBestProduct: false });
-  let { getData, loading } = useAsync();
+  // let { getData, loading } = useAsync();
   let [category, setCategory] = useState("");
   useEffect(() => {
-    getData();
+    // getData();
   }, []);
   let allProduct = Object.assign(
     nameProduct,
@@ -47,9 +49,22 @@ function RadioTabOne() {
               className="btn btn-outline btn-success w-24"
               onClick={(e) => {
                 e.preventDefault();
-                axios.post("api/category", {
-                  allProduct,
-                });
+                axios
+                  .post("https://jsonplaceholder.typicode.com/posts", {
+                    category,
+                    // target: "http://localhost:8080/",
+                  })
+                  .then((response) => {
+                    console.log(response);
+                  })
+                  .catch((error) => {
+                    if (error.response && error.response.status === 431) {
+                      console.log("reuste falilllll 431");
+                      console.log("header error :", error.config.headers);
+                      console.log("data sent :", error.config.data);
+                      console.log("status text :", error.response.statusText);
+                    }
+                  });
               }}
             >
               ارسال
@@ -141,10 +156,13 @@ function RadioTabOne() {
               className="btn btn-outline btn-success w-24"
               onClick={(e) => {
                 e.preventDefault();
-                axios.post("api/product", {
-                  // target: "http://localhost:8080",
-                  allProduct,
-                });
+                axios
+                  .post("api/product", {
+                    allProduct,
+                  })
+                  .then((response) => {
+                    console.log(response);
+                  });
               }}
             >
               ارسال
